@@ -1,0 +1,107 @@
+/* Variables de diseño cromático y tipográfico */
+:root {
+    /* Estrategia cromática: Análoga cálida (Papiro/Tinta) */
+    --bg-color: #f7f3e8;
+    --text-primary: #2c2825;
+    --text-secondary: #5a5047;
+    --accent-color: #8b3a3a;
+
+    /* Estrategia tipográfica: Dos fuentes contrastadas */
+    --font-ui: 'Segoe UI', system-ui, sans-serif;
+    --font-poem: 'Georgia', 'Times New Roman', serif;
+    
+    /* Estrategia espacial */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 3rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-header {
+    width: 100%;
+    max-width: 600px;
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    border-bottom: 1px solid var(--text-secondary);
+}
+
+.controls {
+    margin-top: var(--spacing-md);
+}
+
+select {
+    padding: var(--spacing-sm);
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    border: 1px solid var(--text-secondary);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.app-main {
+    width: 100%;
+    max-width: 600px;
+    padding: var(--spacing-lg) var(--spacing-md);
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Diseño tipográfico y espacial del Soneto */
+.sonnet-container {
+    background: #ffffff;
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.sonnet-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sonnet-header h2 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin: 0 0 var(--spacing-sm) 0;
+}
+
+.author {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.sonnet-body {
+    font-family: var(--font-poem);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin: 0 auto;
+    max-width: 400px; /* Acota la longitud de línea para usabilidad de lectura */
+}
+
+/* Principio Gestalt: Proximidad. Versos unidos, estrofas separadas */
+.stanza {
+    margin-bottom: var(--spacing-md);
+}
+
+.verse {
+    margin: 0;
+    padding-left: var(--spacing-sm);
+    text-indent: -var(--spacing-sm);
+}

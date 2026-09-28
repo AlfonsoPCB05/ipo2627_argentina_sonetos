@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de Sonetos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Vinculación moderna de JS mediante módulos -->
+    <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+    <header class="app-header">
+        <h1>Lector de Sonetos</h1>
+        <div class="controls">
+            <label for="sonnet-select">Escoge un soneto:</label>
+            <!-- Mecanismo para escoger el soneto a leer -->
+            <select id="sonnet-select">
+                <option value="" disabled selected>Selecciona una obra...</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <!-- Contenedor donde se mostrará el poema -->
+        <article id="sonnet-display" class="sonnet-container hidden" aria-live="polite">
+            <header class="sonnet-header">
+                <h2 id="sonnet-title"></h2>
+                <p id="sonnet-author" class="author"></p>
+            </header>
+            <div id="sonnet-content" class="sonnet-body">
+                <!-- Las estrofas se inyectarán aquí dinámicamente -->
+            </div>
+        </article>
+    </main>
+</body>
+</html>
