@@ -4,9 +4,8 @@ export default class Model {
         this.sonnets = [
             {
                 id: "lope-1",
-                title: "Un soneto me manda hacer Violante",
+                title: "Definición de soneto",
                 author: "Lope de Vega",
-                // 14 versos: dos cuartetos y dos tercetos
                 stanzas: [
                     [
                         "Un soneto me manda hacer Violante",
@@ -31,48 +30,139 @@ export default class Model {
                         "contad si son catorce, y está hecho."
                     ]
                 ]
-            
             },
 
             {
                 id: "quevedo-1",
                 title: "A una nariz",
                 author: "Quevedo",
-                stanzas:[
-                [   "Érase un hombre a una nariz pegado",
-                    "érase una nariz superlativa",
-                    "érase una nariz sayón y escriba",
-                    "érase un pez espada muy barbado."
-                ],
-                [   
-                    "Érase un reloj de sol mal encarado,",
-                    "érase un alquitara pensativa,",
-                    "érase un elefante boca arriba,",
-                    "era Ovidio Nasón mas narizado."
-
-                ],
-                [
-                    "Érase un espolón de una galera,",
-                    "érase una pirámide de Egipto,",
-                    "las doce tribus de narices era."
-                ],
-                [
-                    "Érase un naricísimo infinito,",
-                    "muchísima nariz, nariz tan fiera,",
-                    "que en la cara de Anás fuera delito."
-                ],
-
+                stanzas: [
+                    [
+                        "Érase un hombre a una nariz pegado,",
+                        "érase una nariz superlativa,",
+                        "érase una nariz sayón y escriba,",
+                        "érase un pez espada muy barbado."
+                    ],
+                    [
+                        "Érase un reloj de sol mal encarado,",
+                        "érase un alquitara pensativa,",
+                        "érase un elefante boca arriba,",
+                        "era Ovidio Nasón mas narizado."
+                    ],
+                    [
+                        "Érase un espolón de una galera,",
+                        "érase una pirámide de Egipto,",
+                        "las doce tribus de narices era."
+                    ],
+                    [
+                        "Érase un naricísimo infinito,",
+                        "muchísima nariz, nariz tan fiera,",
+                        "que en la cara de Anás fuera delito."
+                    ]
                 ]
+            },
 
+            {
+                id: "garcilaso-1",
+                title: "Escrito está en mi alma",
+                author: "Garcilaso de la Vega",
+                stanzas: [
+                    [
+                        "Escrito está en mi alma vuestro gesto,",
+                        "y cuanto yo escribir de vos deseo;",
+                        "vos sola lo escribisteis, yo lo leo",
+                        "tan solo, que aun de vos me guardo en esto."
+                    ],
+                    [
+                        "En esto estoy y estaré siempre puesto;",
+                        "que aunque no cabe en mí cuanto en vos veo,",
+                        "de tanto bien lo que no entiendo creo,",
+                        "tomando ya la fe por presupuesto."
+                    ],
+                    [
+                        "Yo no nací sino para quereros;",
+                        "mi alma os ha cortado a su medida;",
+                        "por hábito del alma mismo os quiero."
+                    ],
+                    [
+                        "Cuando tengo confieso yo deberos;",
+                        "por vos nací, por vos tengo la vida,",
+                        "por vos he de morir, y por vos muero."
+                    ]
+                ]
+            },
+
+            {
+                id: "gongora-1",
+                title: "Mientras por competir",
+                author: "Góngora",
+                stanzas: [
+                    [
+                        "Mientras por competir con tu cabello,",
+                        "oro bruñido, el Sol relumbra en vano,",
+                        "mientras con menosprecio en medio el llano",
+                        "mira tu blanca frente el lilio bello;"
+                    ],
+                    [
+                        "mientras a cada labio, por cogello,",
+                        "siguen más ojos que al clavel temprano,",
+                        "y mientras triunfa con desdén lozano",
+                        "del luciente cristal tu gentil cuello;"
+                    ],
+                    [
+                        "goza cuello, cabello, labio y frente,",
+                        "antes que lo que fue en tu edad dorada",
+                        "oro, lilio, clavel, cristal luciente,"
+                    ],
+                    [
+                        "no sólo en plata o viola truncada",
+                        "se vuelva, mas tú y ello juntamente",
+                        "en tierra, en humo, en polvo, en sombra, en nada"
+                    ]
+                ]
+            },
+
+            {
+                id: "quevedo-2",
+                title: "Miré los muros",
+                author: "Quevedo",
+                stanzas: [
+                    [
+                        "Miré los muros de la patria mía,",
+                        "si un tiempo fuertes ya desmoronados",
+                        "de la carrera de la edad cansados",
+                        "por quien caduca ya su valentía."
+                    ],
+                    [
+                        "Salime al campo: vi que el sol bebía",
+                        "los arroyos del yelo desatados,",
+                        "y del monte quejosos los ganados",
+                        "que con sombras hurtó su luz al día."
+                    ],
+                    [
+                        "Entré en mi casa: vi que amancillada",
+                        "de anciana habitación era despojos,",
+                        "mi báculo más corvo y menos fuerte."
+                    ],
+                    [
+                        "Vencida de la edad sentí mi espada,",
+                        "y no hallé cosa en que poner los ojos",
+                        "que no fuese recuerdo de la muerte."
+                    ]
+                ]
             }
         ];
-        }
+    }
 
     getAllSonnets() {
-        return this.sonnets.map(s => ({ id: s.id, title: s.title, author: s.author }));
+        return this.sonnets.map(sonnet => ({
+            id: sonnet.id,
+            title: sonnet.title,
+            author: sonnet.author
+        }));
     }
 
     getSonnetById(id) {
-        return this.sonnets.find(s => s.id === id);
+        return this.sonnets.find(sonnet => sonnet.id === id);
     }
 }
