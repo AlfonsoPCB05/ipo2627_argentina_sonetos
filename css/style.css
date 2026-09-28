@@ -28,7 +28,7 @@ body {
     min-height: 100vh;
 }
 
-.app-header {
+.header {
     width: 100%;
     max-width: 600px;
     padding: var(--spacing-lg) var(--spacing-md);
