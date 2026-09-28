@@ -29,7 +29,7 @@ body {
 }
 
 .header {
-    width: 100%;
+    width: 200%;
     max-width: 600px;
     padding: var(--spacing-lg) var(--spacing-md);
     text-align: center;
@@ -50,7 +50,7 @@ select {
     cursor: pointer;
 }
 
-.app-main {
+.main {
     width: 100%;
     max-width: 600px;
     padding: var(--spacing-lg) var(--spacing-md);
