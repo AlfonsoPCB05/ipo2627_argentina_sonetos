@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lector de Sonetos</title>
+    <title>Sonetos</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1436/1436612.png">
     <!-- Vinculación moderna de JS mediante módulos -->
@@ -11,15 +11,18 @@
 </head>
 <body>
     <header class="header">
-        <h1>Lector de Sonetos</h1>
+        <h1>Clásicos Literarios - Sonetos</h1>
         <div class="controls">
             <label for="sonnet-select">Escoge un soneto:</label>
             <!-- Mecanismo para escoger el soneto a leer -->
             <select id="sonnet-select">
                 <option value="" disabled selected>Selecciona una obra...</option>
             </select>
-        </div>
-     <article id="sonnet-display" class="sonnet-container hidden" aria-live="polite">
+        </div>  
+    
+        </header>
+    <main class="main">
+         <article id="sonnet-display" class="sonnet-container hidden" aria-live="polite">
             <header class="sonnet-header">
                 <h2 id="sonnet-title"></h2>
                 <p id="sonnet-author" class="author"></p>
@@ -27,11 +30,8 @@
             <div id="sonnet-content" class="sonnet-body">
                 <!-- Las estrofas se inyectarán aquí dinámicamente -->
             </div>
-        </article/header>
-
-    <main class="main">
         <!-- Contenedor donde se mostrará el poema -->
-       
+         </article>
     </main>
 </body>
 </html>

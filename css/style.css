@@ -29,11 +29,12 @@ body {
 }
 
 .header {
-    width: 200%;
+    width: 100%;
     max-width: 600px;
     padding: var(--spacing-lg) var(--spacing-md);
     text-align: center;
     border-bottom: 1px solid var(--text-secondary);
+    font-size:larger;
 }
 
 .controls {
@@ -67,6 +68,7 @@ select {
     padding: var(--spacing-lg);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-top: 2rem;
 }
 
 .sonnet-header {
